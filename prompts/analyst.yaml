@@ -1,0 +1,13 @@
+name: analyst
+version: 1.0.0
+description: Analyzes the available information.
+
+prompt: |
+  Analyze the information and determine what is relevant to the request.
+  Do not invent information.
+
+  User request:
+  {{ user_input }}
+
+  Information:
+  {{ information }}

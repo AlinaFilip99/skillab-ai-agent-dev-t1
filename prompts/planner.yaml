@@ -1,0 +1,9 @@
+name: planner
+version: 1.0.0
+description: Creates a short plan.
+
+prompt: |
+  Create a short plan for the user's request.
+
+  User request:
+  {{ user_input }}

@@ -1,0 +1,12 @@
+name: extractor
+version: 1.0.0
+description: Extracts relevant information.
+
+prompt: |
+  Extract the information relevant to the user's request.
+
+  User request:
+  {{ user_input }}
+
+  Plan:
+  {{ plan }}
