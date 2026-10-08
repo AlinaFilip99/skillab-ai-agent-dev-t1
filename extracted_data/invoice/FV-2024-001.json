@@ -1,0 +1,26 @@
+{
+  "number": "FV-2024-001",
+  "date": "15.03.2024",
+  "client": "SC Digital Services SRL",
+  "products": [
+    {
+      "name": "Dell Latitude 5540 Laptop",
+      "quantity": 2,
+      "unit_price": 4500.0,
+      "total": 9000.0
+    },
+    {
+      "name": "LG 27\" 4K Monitor",
+      "quantity": 4,
+      "unit_price": 1200.0,
+      "total": 4800.0
+    },
+    {
+      "name": "Logitech Mechanical Keyboard",
+      "quantity": 4,
+      "unit_price": 350.0,
+      "total": 1400.0
+    }
+  ],
+  "total_amount": 18088.0
+}

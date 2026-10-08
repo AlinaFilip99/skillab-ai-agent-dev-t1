@@ -1,4 +1,5 @@
 from pydantic import BaseModel, Field
+from typing import List
 
 class CalculatorParams(BaseModel):
     expression: str = Field(
@@ -30,3 +31,12 @@ class WeatherParams(BaseModel):
         description="Unit system for temperature. Options: 'metric' for Celsius, 'imperial' for Fahrenheit, 'standard' for Kelvin.",
         pattern="^(metric|imperial|standard)$"
     )
+
+class ExtractInvoiceParams(BaseModel):
+    file_path: str = Field(description="Path to the invoice file", min_length=1)
+
+class ExtractContractParams(BaseModel):
+    file_path: str = Field(description="Path to the contract file", min_length=1)
+
+class SearchDocumentsParams(BaseModel):
+    question: str = Field(description="Query used to search in documents", min_length=1)

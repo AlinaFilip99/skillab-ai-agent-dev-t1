@@ -1,10 +1,13 @@
+from huggingface_hub.errors import ValidationError
 import os, requests
 import pprint
 
 from datetime import datetime
-from .params_models import CalculatorParams, LocationCoordinatesParams, WeatherParams, CurrentDateTimeParams
+from .params_models import CalculatorParams, LocationCoordinatesParams, WeatherParams, CurrentDateTimeParams, ExtractInvoiceParams, ExtractContractParams, SearchDocumentsParams
 from .registry import register_tool
-from langchain_community.document_loaders import WebBaseLoader
+from document_pipeline import ExtractionPipeline, Invoice, Contract
+from rag import RAGService
+from db import transaction
 
 OPEN_WEATHER_API_KEY = os.getenv("OPEN_WEATHER_API_KEY")
 
@@ -74,18 +77,53 @@ def get_current_weather(params: WeatherParams) -> str:
     description = data["weather"][0]["description"]
     return f"Current weather: {temp}°C, {description}, Max: {max_temp}°C, Min: {min_temp}°C"
 
-    """Return the content of web pages for a given URL list. Use in relation to the get_web_search_results tool."""
-    urls = params.urls
+@register_tool
+def extract_invoice_tool(params: ExtractInvoiceParams) -> list[dict]:
+    """Extract data from INVOICES: number, date, client, total, products.
+    Used for invoices, financial documents."""
+    
     try:
-        loader = WebBaseLoader(urls)
-        docs = loader.load()
-
-        contents = []
-        for doc in docs:
-            content = doc.page_content.strip()
-            if content:
-                contents.append(content)
-
-        return "\n".join(contents)
+        pipeline = ExtractionPipeline()
+        contents =pipeline.process(params.file_path, Invoice)
+        return [content.model_dump() for content in contents]
+    except FileNotFoundError:
+        return {"success": False, "error": "File not found"}
+    except ValidationError as e:
+        return {"success": False, "error": f"Validation failed: {e}"}
     except Exception as e:
-        return f"Error loading content from URLs: {e}"
+        # Never return raw exceptions — the agent cannot read tracebacks
+        return {"success": False, "error": f"Processing error: {str(e)}"}
+
+@register_tool
+def extract_contract_tool(params: ExtractContractParams) -> list[dict]:
+    """Extract data from CONTRACTS: provider, recipient, value, duration.
+    Used for service provision contracts, commercial agreements, conventions."""
+
+    try:
+        pipeline = ExtractionPipeline()
+        contents =pipeline.process(params.file_path, Contract)
+        return [content.model_dump() for content in contents]
+    except FileNotFoundError:
+        return {"success": False, "error": "File not found"}
+    except ValidationError as e:
+        return {"success": False, "error": f"Validation failed: {e}"}
+    except Exception as e:
+        # Never return raw exceptions — the agent cannot read tracebacks
+        return {"success": False, "error": f"Processing error: {str(e)}"}
+
+@register_tool
+def search_documents(params: SearchDocumentsParams) -> str:
+    """Search the documents stored in the database."""
+
+    with transaction() as db:
+        rag = RAGService(db)
+
+        context = rag.get_context(
+            params.question,
+            top_k=3,
+        )
+
+    if not context:
+        return "Could not find relevant documents."
+
+    return context

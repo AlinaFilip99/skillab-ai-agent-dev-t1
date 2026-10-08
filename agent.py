@@ -7,8 +7,8 @@ import os
 import gradio as gr
 import pprint
 
-from prompts.registry import PromptRegistry
-from tools.tool_wrapper import ToolWrapper
+from prompts import PromptRegistry
+from tools import ToolWrapper
 from langchain_google_genai import ChatGoogleGenerativeAI
 
 from langchain_core.messages import (
@@ -41,131 +41,6 @@ def _handle_shutdown(signum, frame):
 
 signal.signal(signal.SIGINT, _handle_shutdown)
 
-# # ------ Simple qa chatbot (tools + prompts) ------
-# # --- START ---
-# class QAAgent:
-#     """Agent conversational cu istoric."""
-    
-#     def __init__(self, **kwargs):
-#         self.llm = self.create_llm(**kwargs)
-
-#         prompt_registry = get_prompt_registry()
-#         self.registry = prompt_registry
-
-#     def create_llm(self, **kwargs):
-#         llm = ChatGoogleGenerativeAI(
-#             model="gemini-3.5-flash-lite", google_api_key=google_api_key, **kwargs)
-#         return llm
-
-#     def run_prompt(self, prompt_name: str, **kwargs) -> str:
-#         prompt = self.registry.render(
-#             prompt_name,
-#             **kwargs
-#         )
-
-#         response = self.llm.invoke([
-#             HumanMessage(content=prompt)
-#         ])
-
-#         return response.text
-
-#     def create_plan(self, user_input: str) -> str:
-#         return self.run_prompt(
-#             "planner",
-#             user_input=user_input
-#         )
-
-#     def extract(
-#         self,
-#         user_input: str,
-#         plan: str
-#     ) -> str:
-
-#         return self.run_prompt(
-#             "extractor",
-#             user_input=user_input,
-#             plan=plan
-#         )
-
-#     def analyze(
-#         self,
-#         user_input: str,
-#         information: str
-#     ) -> str:
-
-#         return self.run_prompt(
-#             "analyst",
-#             user_input=user_input,
-#             information=information
-#         )
-
-#     def summarize(
-#         self,
-#         user_input: str,
-#         analysis: str,
-#         max_words: int = 150
-#     ) -> str:
-
-#         return self.run_prompt(
-#             "summarizer",
-#             user_input=user_input,
-#             analysis=analysis,
-#             max_words=max_words
-#         )
-
-#     def answer(self, user_input: str) -> str:
-#         plan = self.create_plan(user_input)
-
-#         information = self.extract(
-#             user_input,
-#             plan
-#         )
-        
-#         analysis = self.analyze(
-#             user_input,
-#             information
-#         )
-        
-#         return self.summarize(
-#             user_input,
-#             analysis
-#         )
-#     # Execuție (Python)
-#     async def execute_all_tools(self, tool_calls: list) -> list:
-#         # Lansăm toate tool-urile simultan, nu așteptăm pe rând
-#         tasks = [self.execute_tool_async(tc) for tc in tool_calls]
-#         return await asyncio.gather(*tasks)
-    
-#     async def execute_tool_async(self,tool_call: dict) -> dict:
-#         name = tool_call["name"]
-#         args = tool_call["args"]
-#         # Rulăm tool-ul sincron într-un thread separat
-#         rezultat = await asyncio.to_thread(ToolWrapper.call, name, args)
-#         return {"tool_call_id": tool_call["id"], "content": str(rezultat)}
-
-
-# qa_chatbot = QAAgent()
-
-# def generate_response(message: str) -> str:
-#     chatbot_response = qa_chatbot.answer(message)
-#     return chatbot_response
-
-# # Create Gradio interface
-# agent_application = gr.Interface(
-#     fn=generate_response,
-#     inputs=[
-#         gr.Textbox(label="Input", lines=2, placeholder="Type your question here...")
-#     ],
-#     outputs=gr.Textbox(label="Output"),
-#     title="Chatbot"
-# )
-
-# # Launch the app
-# agent_application.launch(server_name="127.0.0.1", server_port=7860)
-
-# # --- END ---
-
-
 # ------ ReAct QA chatbot ------
 # --- START ---
 class ReActQAAgent:
@@ -176,10 +51,7 @@ class ReActQAAgent:
 
         prompt_registry = get_prompt_registry()
         system_prompt = prompt_registry.render(
-            "ask_ai_system",
-            role="legal expert",
-            field="labor law",
-            max_words=150
+            "ask_ai_system"
         )
 
         self.history: list[BaseMessage] = [SystemMessage(content=system_prompt)] # lista goala la start

@@ -1,0 +1,34 @@
+[
+  {
+    "number": "CS-2024-015",
+    "signing_date": "01.03.2024",
+    "provider": "SC CloudTech Services SRL",
+    "recipient": "SC Manufacturing Pro SRL",
+    "value": 53550.0,
+    "duration_months": 6,
+    "obligations_provider": [
+      "Implementation of an ERP system for production management",
+      "Data migration from the existing system",
+      "Configuration and customization of modules",
+      "Technical support and maintenance"
+    ]
+  },
+  {
+    "number": "4",
+    "signing_date": "01.03.2024",
+    "provider": "SC CloudTech Services SRL",
+    "recipient": "SC Manufacturing Pro SRL",
+    "value": 0.0,
+    "duration_months": 6,
+    "obligations_provider": [
+      "Analyze the Beneficiary's business requirements and processes",
+      "Configure and customize the ERP system in accordance with the specifications",
+      "Migrate the existing data while verifying data integrity",
+      "Provide user training (minimum 40 hours)",
+      "Provide technical documentation and user manuals",
+      "Provide technical support during the warranty period (12 months)",
+      "Comply with the agreed delivery deadlines",
+      "Maintain the confidentiality of the information received"
+    ]
+  }
+]

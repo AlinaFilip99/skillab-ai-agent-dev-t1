@@ -1,0 +1,39 @@
+**TAX INVOICE**
+No. FV-2024-002
+Date: 22.03.2024
+
+**SUPPLIER:**
+SC WebDev Expert SRL
+Tax Identification Number (CUI): RO23456789
+Trade Registry No.: J40/2345/2021
+78 Progresului Street, Cluj-Napoca
+IBAN Account: RO62BRDE445SV00123456789
+
+**CUSTOMER:**
+SC Retail Plus SRL
+Tax Identification Number (CUI): RO34567890
+Trade Registry No.: J12/3456/2018
+5 Comercială Street, Timișoara
+
+**SERVICES PROVIDED:**
+
+| No. | Service Description               | Quantity | Unit Price |   Amount |
+| --- | --------------------------------- | -------: | ---------: | -------: |
+| 1   | E-commerce website development    |        1 |   8,500.00 | 8,500.00 |
+| 2   | Online payment system integration |        1 |   2,000.00 | 2,000.00 |
+| 3   | Hosting and domain setup (1 year) |        1 |     450.00 |   450.00 |
+| 4   | Platform user training (8 hours)  |        8 |     150.00 | 1,200.00 |
+| 5   | Monthly maintenance (3 months)    |        3 |     300.00 |   900.00 |
+
+**SUBTOTAL:** 13,050.00 RON
+**VAT (19%):** 2,479.50 RON
+
+**TOTAL AMOUNT DUE:** **15,529.50 RON**
+
+**Service period:** 01.02.2024 – 20.03.2024
+**Payment terms:** 15 days from the date of issue
+**Payment method:** Bank transfer
+
+Invoice issued by: Alexandru Popa
+
+Supplier's signature: _________________

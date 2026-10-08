@@ -1,0 +1,40 @@
+[
+  {
+    "number": "FV-2024-002",
+    "date": "22.03.2024",
+    "client": "SC Retail Plus SRL",
+    "products": [
+      {
+        "name": "E-commerce website development",
+        "quantity": 1,
+        "unit_price": 8500.0,
+        "total": 8500.0
+      },
+      {
+        "name": "Online payment system integration",
+        "quantity": 1,
+        "unit_price": 2000.0,
+        "total": 2000.0
+      },
+      {
+        "name": "Hosting and domain setup (1 year)",
+        "quantity": 1,
+        "unit_price": 450.0,
+        "total": 450.0
+      },
+      {
+        "name": "Platform user training (8 hours)",
+        "quantity": 8,
+        "unit_price": 150.0,
+        "total": 1200.0
+      },
+      {
+        "name": "Monthly maintenance (3 months)",
+        "quantity": 3,
+        "unit_price": 300.0,
+        "total": 900.0
+      }
+    ],
+    "total_amount": 15529.5
+  }
+]

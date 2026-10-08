@@ -1,0 +1,36 @@
+**TAX INVOICE**
+No. FV-2024-001
+Date: 15.03.2024
+
+**SUPPLIER:**
+SC TechPro Solutions SRL
+Tax Identification Number (CUI): RO12345678
+Trade Registry No.: J40/1234/2020
+45 Victoriei Street, Sector 1, Bucharest
+IBAN Account: RO49AAAA1B31007593840000
+
+**CUSTOMER:**
+SC Digital Services SRL
+Tax Identification Number (CUI): RO87654321
+Trade Registry No.: J40/5678/2019
+12 Unirii Blvd., Sector 3, Bucharest
+
+**PRODUCTS/SERVICES:**
+
+| No. | Description                  | Unit | Quantity | Unit Price |   Amount |
+| --- | ---------------------------- | ---- | -------: | ---------: | -------: |
+| 1   | Dell Latitude 5540 Laptop    | pcs. |        2 |   4,500.00 | 9,000.00 |
+| 2   | LG 27" 4K Monitor            | pcs. |        4 |   1,200.00 | 4,800.00 |
+| 3   | Logitech Mechanical Keyboard | pcs. |        4 |     350.00 | 1,400.00 |
+
+**SUBTOTAL:** 15,200.00 RON
+**VAT (19%):** 2,888.00 RON
+
+**TOTAL AMOUNT DUE:** **18,088.00 RON**
+
+**Payment terms:** 30 days from the date of issue
+**Payment method:** Bank transfer
+
+Prepared by: Maria Ionescu
+
+Supplier's signature: _________________

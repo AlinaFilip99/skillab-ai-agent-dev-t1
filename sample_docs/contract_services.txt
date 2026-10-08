@@ -1,0 +1,92 @@
+**IT SERVICES AGREEMENT**
+No. CS-2024-015
+Date of execution: 01.03.2024
+
+## I. CONTRACTING PARTIES
+
+### 1.1 SERVICE PROVIDER:
+
+SC CloudTech Services SRL
+Tax Identification Number (CUI): RO11223344
+Trade Registry No.: J40/1122/2019
+Registered Office: 25 Inovației Street, Sector 2, Bucharest
+Legal Representative: Andrei Georgescu, General Manager
+Tel.: +40 21 123 4567
+Email: [contact@cloudtech.ro](mailto:contact@cloudtech.ro)
+
+### 1.2 BENEFICIARY:
+
+SC Manufacturing Pro SRL
+Tax Identification Number (CUI): RO55667788
+Trade Registry No.: J35/4455/2017
+Registered Office: 100 Industrială Street, Brașov
+Legal Representative: Elena Dumitrescu, Administrator
+Tel.: +40 268 987 654
+Email: [office@manufacturingpro.ro](mailto:office@manufacturingpro.ro)
+
+## II. SUBJECT MATTER OF THE AGREEMENT
+
+**2.1** The Service Provider undertakes to provide the Beneficiary with the following IT services:
+
+* Implementation of an ERP system for production management
+* Data migration from the existing system
+* Configuration and customization of modules
+* Technical support and maintenance
+
+## III. CONTRACT VALUE
+
+**3.1** Total contract value: EUR 45,000.00 (excluding VAT)
+**3.2** VAT (19%): EUR 8,550.00
+**3.3** Total value including VAT: EUR 53,550.00
+
+**3.4** Payment shall be made in 3 installments:
+
+* 40% upon signing of the Agreement: EUR 21,420.00
+* 40% upon completion of the implementation: EUR 21,420.00
+* 20% upon final acceptance: EUR 10,710.00
+
+## IV. TERM OF THE AGREEMENT
+
+**4.1** Contract term: 6 months
+**4.2** Start date: 01.03.2024
+**4.3** Completion date: 31.08.2024
+
+## V. OBLIGATIONS OF THE SERVICE PROVIDER
+
+**5.1** The Service Provider undertakes to:
+
+* Analyze the Beneficiary's business requirements and processes
+* Configure and customize the ERP system in accordance with the specifications
+* Migrate the existing data while verifying data integrity
+* Provide user training (minimum 40 hours)
+* Provide technical documentation and user manuals
+* Provide technical support during the warranty period (12 months)
+* Comply with the agreed delivery deadlines
+* Maintain the confidentiality of the information received
+
+## VI. OBLIGATIONS OF THE BENEFICIARY
+
+**6.1** The Beneficiary undertakes to:
+
+* Provide all information necessary for the implementation
+* Provide access to the existing IT infrastructure
+* Designate a project team for collaboration
+* Make payments according to the agreed payment schedule
+* Participate in training and testing sessions
+
+## VII. FINAL PROVISIONS
+
+**7.1** Any disputes shall be settled amicably or by the competent courts in Bucharest.
+
+**7.2** Any amendments to the Agreement shall be made only by means of an addendum.
+
+Executed today, 01.03.2024, in 2 original counterparts.
+
+**SERVICE PROVIDER:**                     **BENEFICIARY:**
+SC CloudTech Services SRL                SC Manufacturing Pro SRL
+Andrei Georgescu                          Elena Dumitrescu
+General Manager                           Administrator
+
+---
+
+(signature and stamp)                     (signature and stamp)
